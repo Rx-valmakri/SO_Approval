@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sale_order_form_view" model="ir.ui.view">
+        <field name="name">sale.order.inherit.form.</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_confirm']" position="before">
+                <field name="approve_check" invisible="1"/>
+                <button name="action_approve" type="object" string="Approve" invisible="state != 'waiting_for_approval'" groups="so_approval.so_approval_group_manager"/>
+                <button name="action_disapprove" type="object" string="Disapprove" invisible="state !='waiting_for_approval'" groups="so_approval.so_approval_group_manager"/>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="replace">
+                <field name="state" widget="statusbar" statusbar_visible="draft,sent,sale"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

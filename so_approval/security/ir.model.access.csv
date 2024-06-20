@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_so_approval_manager,access.so.approval.manager,model_sale_order,so_approval_group_manager,1,1,1,1
+access_so_approval_user,access.so.approval.user,model_sale_order,so_approval_group_user,1,1,1,1
+
+access_warning_message_user,access.warning.message.user,model_warning_message,so_approval_group_user,1,1,1,1
+access_warning_message_manager,access.warning.message.manager,model_warning_message,so_approval_group_manager,1,1,1,1

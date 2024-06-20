@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="module_so_approval" model="ir.module.category">
+            <field name="name">SO Approval</field>
+    </record>
+
+    <record id="so_approval_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="module_so_approval"/>
+    </record>
+
+    <record id="so_approval_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_so_approval"/>
+    </record>
+
+</odoo>
